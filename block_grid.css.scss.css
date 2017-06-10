@@ -3,7 +3,7 @@
 // https://github.com/zurb/foundation/blob/f755d8704123f86c281ede0b171881e2672f150d/scss/foundation/components/_block-grid.scss
 // Original LESS Version by Christopher Mitchell (https://gist.github.com/ChrisTM)
 // Converted to SCSS by Rasmus Jaars (https://github.com/Jursdotme)
-// Adapted and tweaked for flexbox by Pepe Fernandez @ Geekmatic*/
+// Adapted and tweaked for flexbox by Pepe Fernandez (https://github.com/JoeTEvil)/
 
 
 [class*="block-grid-"] {
@@ -39,7 +39,7 @@
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   margin: 0;
-  padding: ($grid-gutter-width/2);
+  padding: ($grid-gutter-width-base/2);
   height: auto;
   list-style: none;
 }
@@ -74,6 +74,6 @@
 }
 
 @include block-grids(xs);
-@media (min-width: $screen-sm-min) { @include block-grids(sm) }
-@media (min-width: $screen-md-min) { @include block-grids(md) }
-@media (min-width: $screen-lg-min) { @include block-grids(lg) }
+@media (min-width: 576px) { @include block-grids(sm) }
+@media (min-width: 768px) { @include block-grids(md) }
+@media (min-width: 1200px) { @include block-grids(lg) }
